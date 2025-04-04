@@ -57,7 +57,7 @@ export function BrandCarousel({ brands }: { brands: Brand[] }) {
   return (
     <div className="relative w-full overflow-hidden py-8">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-3xl font-bold tracking-tight">Våre Merkevarer</h2>
+        <h2 className="text-3xl font-bold tracking-tight">Noen av Våre Merkevarer og Leverandører</h2>
         <div className="flex gap-2">
           <Button
             variant="outline"
@@ -90,13 +90,15 @@ export function BrandCarousel({ brands }: { brands: Brand[] }) {
         {brands.map((brand, index) => (
           <div key={index} className="flex-shrink-0 px-4" style={{ width: `${100 / visibleBrands}%` }}>
             <div className="flex flex-col items-center justify-center p-6 h-40 bg-white rounded-lg border hover:shadow-md transition-shadow">
-              <Image
-                src={brand.logo || "/placeholder.svg"}
-                alt={`${brand.name} logo`}
-                width={160}
-                height={80}
-                className="h-20 w-auto grayscale transition-all hover:grayscale-0"
-              />
+              <div className="relative h-20 w-full flex items-center justify-center">
+                <Image
+                  src={brand.logo || "/placeholder.svg"}
+                  alt={`${brand.name} logo`}
+                  width={160}
+                  height={80}
+                  className="max-h-20 w-auto object-contain transition-all hover:opacity-100 opacity-80"
+                />
+              </div>
               <p className="mt-4 text-sm font-medium text-center">{brand.name}</p>
             </div>
           </div>

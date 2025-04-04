@@ -8,14 +8,34 @@ import { BrandCarousel } from "@/app/components/brand-carousel"
 
 export default function Home() {
   const brands = [
-    { name: "Bona", logo: "/placeholder.svg?height=80&width=160&text=Bona" },
-    { name: "Osmo", logo: "/placeholder.svg?height=80&width=160&text=Osmo" },
-    { name: "3M", logo: "/placeholder.svg?height=80&width=160&text=3M" },
-    { name: "Classic", logo: "/placeholder.svg?height=80&width=160&text=Classic" },
-    { name: "Rubio Monocoat", logo: "/placeholder.svg?height=80&width=160&text=Rubio" },
-    { name: "Vermeister", logo: "/placeholder.svg?height=80&width=160&text=Vermeister" },
-    { name: "Loba", logo: "/placeholder.svg?height=80&width=160&text=Loba" },
-    { name: "Pallmann", logo: "/placeholder.svg?height=80&width=160&text=Pallmann" },
+    {
+      name: "Bona",
+      logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Bona-Logo.jpg-rl3FsgXJNsC1kLFu4mZuXHQHNnQPLF.jpeg",
+    },
+    {
+      name: "Osmo",
+      logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/osmo-logo.jpg-1g8WAH44NEQi0SZaF3zxInMaDTJkZ1.jpeg",
+    },
+    {
+      name: "3M",
+      logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3M_wordmark.svg-bvXrFViPVXfO33yhs5Zl9DLS7MkI07.png",
+    },
+    {
+      name: "Classic",
+      logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Classic-uretan-etikett20.jpg-SakGUiF6U7eSVOPOnrGLaVgnekBMrU.jpeg",
+    },
+    {
+      name: "Rubio Monocoat",
+      logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-rubio-alt-wPTasx7QlL5pI7RdDpSDNQ2UVzMcos.svg",
+    },
+    {
+      name: "Junckers",
+      logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/junckers-logo-ynfzzgXbORsM15bgybqwI4U84WEno9.svg",
+    },
+    {
+      name: "GK Professional",
+      logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/GK%20Professional%20line%20blue.jpg-gJ8YKiw3LAtqvvguPzM3jwjlwOdVZB.jpeg",
+    },
   ]
 
   return (
@@ -26,11 +46,11 @@ export default function Home() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative">
-          <div className="absolute inset-0 bg-black/40 z-10" />
+          <div className="absolute inset-0 bg-black/30 z-10" />
           <div className="relative h-[600px] w-full">
             <Image
-              src="https://images.unsplash.com/photo-1562663474-6cbb3eaa4d14?q=80&w=1920&auto=format&fit=crop"
-              alt="Elegant parquet flooring"
+              src="/images/sapling.png"
+              alt="Oak sapling growing from wooden floor in modern interior"
               fill
               priority
               className="object-cover"
@@ -47,7 +67,11 @@ export default function Home() {
                   Se Våre Produkter
                   <ChevronRight className="ml-2 h-4 w-4" />
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-black">
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  className="bg-black/60 text-white border-white hover:bg-white hover:text-black"
+                >
                   Finn Riktig Løsning
                 </Button>
               </div>
@@ -58,59 +82,60 @@ export default function Home() {
         {/* Product Categories */}
         <section className="py-16 bg-gray-50">
           <div className="container">
-            <h2 className="text-3xl font-bold tracking-tight text-center mb-12">Produktkategorier</h2>
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
+            <h2 className="text-3xl font-bold tracking-tight text-center mb-12">Populære kategorier</h2>
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {[
                 {
                   title: "Gulvbehandling",
-                  description: "Lakk, olje og vedlikeholdsprodukter",
-                  image: "https://images.unsplash.com/photo-1594844532765-0c89a0714d0c?q=80&w=500&auto=format&fit=crop",
+                  description: "Lakk, olje og vedlikeholdsprodukter fra ledende merker som Bona og Osmo",
+                  image:
+                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/gulvbehandling-TEMP-YuMywjyda04lFREuVwgi6cjyJLv7Go.png",
                 },
                 {
-                  title: "Sliperekvisita",
-                  description: "Slipepapir, pusseskiver og tilbehør",
-                  image: "https://images.unsplash.com/photo-1566837945700-30057527ade0?q=80&w=500&auto=format&fit=crop",
+                  title: "",
+                  description: "Kvalitets slipepapir, pusseskiver og tilbehør for profesjonelle",
+                  image:
+                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ZFMBEJwnQ1TOqD2J5E5hkppe4RFGfQ.png",
                 },
                 {
                   title: "Maskiner",
-                  description: "Slipemaskiner, poleringsmaskiner og støvsugere",
-                  image: "https://images.unsplash.com/photo-1504148455328-c376907d081c?q=80&w=500&auto=format&fit=crop",
-                },
-                {
-                  title: "Verneutstyr",
-                  description: "Masker, hansker og beskyttelsesklær",
-                  image: "https://images.unsplash.com/photo-1618516976405-127685b3e4f2?q=80&w=500&auto=format&fit=crop",
-                },
-                {
-                  title: "Tilbehør",
-                  description: "Verktøy, lim og monteringsmateriell",
-                  image: "https://images.unsplash.com/photo-1541533848490-bc8115cd6522?q=80&w=500&auto=format&fit=crop",
+                  description: "Profesjonelle slipemaskiner, poleringsmaskiner og støvsugere",
+                  image:
+                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Maskiner-UdXmGoxqXLhmeFeXrM1Gj9AWuP5KsI.png",
                 },
               ].map((category, index) => (
                 <Link
                   key={index}
-                  href={`/produkter#${category.title.toLowerCase()}`}
+                  href={`/produkter#${category.title.toLowerCase() || "sliperekvisita"}`}
                   className="group relative overflow-hidden rounded-lg border bg-background shadow-sm transition-all hover:shadow-md"
                 >
                   <div className="relative h-48 w-full overflow-hidden">
                     <Image
                       src={category.image || "/placeholder.svg"}
-                      alt={category.title}
+                      alt={category.title || "Sliperekvisita"}
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-black/30"></div>
+                    <div className="absolute inset-0 bg-black/15"></div>
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-semibold">{category.title}</h3>
-                    <p className="mt-2 text-sm text-muted-foreground">{category.description}</p>
-                    <div className="mt-4 flex items-center">
+                    <p className="text-sm text-muted-foreground mb-4">{category.description}</p>
+                    <div className="flex items-center">
                       <span className="text-sm font-medium text-primary group-hover:underline">Se produkter</span>
                       <ChevronRight className="ml-1 h-4 w-4 text-primary" />
                     </div>
                   </div>
                 </Link>
               ))}
+            </div>
+            <div className="mt-8 text-center">
+              <Link
+                href="/produkter"
+                className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-base font-medium text-primary-foreground hover:bg-primary/90"
+              >
+                Se alle kategorier
+                <ChevronRight className="ml-2 h-4 w-4" />
+              </Link>
             </div>
           </div>
         </section>

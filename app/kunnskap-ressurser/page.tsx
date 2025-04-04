@@ -2,7 +2,6 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { ChevronRight, Download, FileText } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import { Header } from "@/app/components/header"
 import { Footer } from "@/app/components/footer"
 
@@ -26,7 +25,11 @@ export default function KnowledgeResourcesPage() {
         <section className="mb-16">
           <h2 className="text-2xl font-bold mb-6">Faglige Guider</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-background rounded-lg border overflow-hidden">
+            <Link
+              href="https://gulvkompagniet.com/Datablader%20Bona/Brosjyre%20Bona%20Olje%20System%20Norsk.pdf"
+              target="_blank"
+              className="bg-background rounded-lg border overflow-hidden hover:shadow-md transition-shadow"
+            >
               <div className="relative h-48">
                 <Image
                   src="https://images.unsplash.com/photo-1594844532765-0c89a0714d0c?q=80&w=800&auto=format&fit=crop"
@@ -40,14 +43,18 @@ export default function KnowledgeResourcesPage() {
                 <p className="text-sm text-muted-foreground mb-4">
                   En komplett guide til oljing av tregulv. Lær om forberedelser, påføringsteknikker og etterbehandling.
                 </p>
-                <Button variant="outline" size="sm" className="flex items-center">
+                <div className="flex items-center text-primary">
                   <Download className="mr-2 h-4 w-4" />
-                  Last ned PDF
-                </Button>
+                  <span>Last ned PDF</span>
+                </div>
               </div>
-            </div>
+            </Link>
 
-            <div className="bg-background rounded-lg border overflow-hidden">
+            <Link
+              href="https://gulvkompagniet.com/Datablader%20Bona/Slipeguide%20Bona%20Norsk.pdf"
+              target="_blank"
+              className="bg-background rounded-lg border overflow-hidden hover:shadow-md transition-shadow"
+            >
               <div className="relative h-48">
                 <Image
                   src="https://images.unsplash.com/photo-1566837945700-30057527ade0?q=80&w=800&auto=format&fit=crop"
@@ -62,14 +69,18 @@ export default function KnowledgeResourcesPage() {
                   Detaljert guide om sliping av ulike gulvtyper. Inkluderer valg av slipemidler, teknikker og
                   feilsøking.
                 </p>
-                <Button variant="outline" size="sm" className="flex items-center">
+                <div className="flex items-center text-primary">
                   <Download className="mr-2 h-4 w-4" />
-                  Last ned PDF
-                </Button>
+                  <span>Last ned PDF</span>
+                </div>
               </div>
-            </div>
+            </Link>
 
-            <div className="bg-background rounded-lg border overflow-hidden">
+            <Link
+              href="https://gulvkompagniet.com/Datablader%20Bona/Vedlikeholdsguide%20Bona%20Norsk.pdf"
+              target="_blank"
+              className="bg-background rounded-lg border overflow-hidden hover:shadow-md transition-shadow"
+            >
               <div className="relative h-48">
                 <Image
                   src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?q=80&w=800&auto=format&fit=crop"
@@ -83,12 +94,12 @@ export default function KnowledgeResourcesPage() {
                 <p className="text-sm text-muted-foreground mb-4">
                   Alt du trenger å vite om vedlikehold av oljebehandlede og lakkerte tregulv for optimal levetid.
                 </p>
-                <Button variant="outline" size="sm" className="flex items-center">
+                <div className="flex items-center text-primary">
                   <Download className="mr-2 h-4 w-4" />
-                  Last ned PDF
-                </Button>
+                  <span>Last ned PDF</span>
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
         </section>
 
@@ -102,7 +113,11 @@ export default function KnowledgeResourcesPage() {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="flex items-center p-4 bg-background rounded-lg border">
+              <Link
+                href="https://gulvkompagniet.com/Datablader%20Bona/"
+                target="_blank"
+                className="flex items-center p-4 bg-background rounded-lg border hover:shadow-md transition-shadow"
+              >
                 <FileText className="h-8 w-8 text-primary mr-4" />
                 <div>
                   <h3 className="font-semibold">Bona Produkter</h3>
@@ -110,43 +125,47 @@ export default function KnowledgeResourcesPage() {
                     Datablader for lakker, oljer, primere og vedlikeholdsprodukter
                   </p>
                 </div>
-                <Link href="#" className="ml-auto text-primary hover:underline">
-                  <ChevronRight className="h-5 w-5" />
-                </Link>
-              </div>
+                <ChevronRight className="ml-auto h-5 w-5 text-primary" />
+              </Link>
 
-              <div className="flex items-center p-4 bg-background rounded-lg border">
+              <Link
+                href="https://gulvkompagniet.com/Datablader%20Osmo/"
+                target="_blank"
+                className="flex items-center p-4 bg-background rounded-lg border hover:shadow-md transition-shadow"
+              >
                 <FileText className="h-8 w-8 text-primary mr-4" />
                 <div>
                   <h3 className="font-semibold">Osmo Produkter</h3>
                   <p className="text-sm text-muted-foreground">Datablader for hardvoksoljer og vedlikeholdsprodukter</p>
                 </div>
-                <Link href="#" className="ml-auto text-primary hover:underline">
-                  <ChevronRight className="h-5 w-5" />
-                </Link>
-              </div>
+                <ChevronRight className="ml-auto h-5 w-5 text-primary" />
+              </Link>
 
-              <div className="flex items-center p-4 bg-background rounded-lg border">
+              <Link
+                href="https://gulvkompagniet.com/Datablader%20Rubio/"
+                target="_blank"
+                className="flex items-center p-4 bg-background rounded-lg border hover:shadow-md transition-shadow"
+              >
                 <FileText className="h-8 w-8 text-primary mr-4" />
                 <div>
                   <h3 className="font-semibold">Rubio Monocoat</h3>
                   <p className="text-sm text-muted-foreground">Datablader for oljer og vedlikeholdsprodukter</p>
                 </div>
-                <Link href="#" className="ml-auto text-primary hover:underline">
-                  <ChevronRight className="h-5 w-5" />
-                </Link>
-              </div>
+                <ChevronRight className="ml-auto h-5 w-5 text-primary" />
+              </Link>
 
-              <div className="flex items-center p-4 bg-background rounded-lg border">
+              <Link
+                href="https://gulvkompagniet.com/Datablader%20Sliperekvisita/"
+                target="_blank"
+                className="flex items-center p-4 bg-background rounded-lg border hover:shadow-md transition-shadow"
+              >
                 <FileText className="h-8 w-8 text-primary mr-4" />
                 <div>
                   <h3 className="font-semibold">Sliperekvisita</h3>
                   <p className="text-sm text-muted-foreground">Datablader for slipepapir, rondeller og nett</p>
                 </div>
-                <Link href="#" className="ml-auto text-primary hover:underline">
-                  <ChevronRight className="h-5 w-5" />
-                </Link>
-              </div>
+                <ChevronRight className="ml-auto h-5 w-5 text-primary" />
+              </Link>
             </div>
           </div>
         </section>
